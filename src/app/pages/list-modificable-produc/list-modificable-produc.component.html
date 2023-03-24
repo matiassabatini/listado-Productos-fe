@@ -1,0 +1,35 @@
+
+
+
+<div class="contenedor-tabla" style="width:600px;margin-left: auto;margin-right: auto;margin-top: 20px;">
+
+    <table class="table" >
+        <thead style="text-align: center; background-color: rgba(28, 29, 36, 0.993);color: aliceblue;">
+          <tr>
+            <th scope="col">Codigo:</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Stock</th>
+            <th scope="col">$+IVA</th>
+            <th scope="col">Acciones:</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+          <tr *ngFor="let producto of productos">
+          <td>{{producto.codigo}}</td>
+          <td>{{producto.nombre}}</td>
+          <td>{{producto.stock}}</td>
+          <td>{{"$"+producto.precioIva}}</td>
+          <td>
+    
+            <button (click)="actualizarProducto(producto.id)" class="btn btn-primary">Editar</button>
+         
+            <button (click)="eliminarEmpleado(producto.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            <button (click)="verDetallesProducto(producto.id)" class="btn btn-primary" style="margin-left: 10px;">Detalles</button>
+          </td>
+         
+          </tr>
+          
+        </tbody>
+      </table>
+
+</div>

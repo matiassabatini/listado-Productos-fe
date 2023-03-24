@@ -1,0 +1,32 @@
+
+<div class="col-md-6 offset-md3" style="width: 600px;margin-left: auto;margin-right: auto;margin-top: 20px;" >
+    <h3 class="text-center">Añadir Producto</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <label for="">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="producto.nombre" name="nombre">
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Codigo:</label>
+            <input type="number" class="form-control" id="codigo" [(ngModel)]="producto.codigo" name="codigo">
+    
+            </div>
+
+            <div class="form-group">
+                <label for="">Stock</label>
+                <input type="number" class="form-control" id="stock" [(ngModel)]="producto.stock" name="stock">
+        
+                </div>
+
+                <div class="form-group">
+                    <label for="">Precio + IVA</label>
+                    <input type="number" class="form-control" id="precioIva" [(ngModel)]="producto.precioIva" name="precioIva">
+            
+                    </div>
+                    <div style="display: flex;justify-content: end;margin-top: 20px; "><button  class="btn btn-primary">AGREGAR</button></div>
+
+    </form>
+
+</div>
